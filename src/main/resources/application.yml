@@ -1,0 +1,42 @@
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  application:
+    name: ms-auth
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_db?currentSchema=management
+    username: user
+    password: pass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+  rabbitmq:
+    publisher-returns: true
+    publisher-confirm-type: correlated
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    connection-timeout: 5000
+    template:
+      retry:
+        enabled: false
+        max-attempts: 3
+        initial-interval: 1000
+        multiplier: 2
+        max-interval: 10000
+
+amqp:
+  queue:
+    user-created: user-created.queue
+  dlq:
+    user-created-dlq: user-created.dlq
+
+server:
+  servlet:
+    context-path: /api/v1
+  port: 8081
+
+jwt:
+  public-key-path: ./keys/public_key.pem
