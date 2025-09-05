@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import ms.usermanagement.domain.model.Address;
+import ms.usermanagement.domain.model.User;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -43,10 +44,11 @@ public class AddressEntity {
     public AddressEntity() {
     }
 
-    public static AddressEntity toEntity(Address address) {
+    public static AddressEntity toEntity(Address address, UserEntity userEntity) {
         AddressEntity entity = new AddressEntity();
         entity.setId(address.id());
         entity.setBrand(address.street());
+        entity.setUser(userEntity);
         entity.setNumber(address.number());
         entity.setCity(address.city());
         entity.setState(address.state());
