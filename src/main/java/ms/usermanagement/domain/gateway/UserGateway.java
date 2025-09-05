@@ -2,6 +2,8 @@ package ms.usermanagement.domain.gateway;
 
 import ms.usermanagement.domain.model.User;
 
+import java.util.List;
+
 public interface UserGateway {
     boolean existsByEmail(String email);
 
@@ -10,5 +12,7 @@ public interface UserGateway {
     User findById(String id);
 
     boolean existByDocument(String document);
+
+    List<User> findAll();
 }
 

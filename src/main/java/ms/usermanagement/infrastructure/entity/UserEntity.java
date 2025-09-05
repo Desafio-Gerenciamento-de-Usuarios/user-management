@@ -34,7 +34,7 @@ public class UserEntity {
     @Column(name = "DT_CRIACAO")
     private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<AddressEntity> address;
 
     public UserEntity() {
@@ -47,16 +47,20 @@ public class UserEntity {
         entity.setEmail(user.getEmail());
         entity.setName(user.getName());
         entity.setPhone(user.getPhone());
-        entity.setAddress(user.getAddresses()
-                .stream()
-                .map(AddressEntity::toEntity)
-                .toList());
         entity.setCreatedAt(user.getCreatedAt());
+        entity.setAddress(
+                user.getAddresses()
+                        .stream()
+                        .map(address -> AddressEntity.toEntity(address, entity))
+                        .toList()
+        );
+
         return entity;
     }
 
-    public void toDomain() {
-        new User(
+
+    public User toDomain() {
+        return new User(
                 this.getId(),
                 this.getDocument(),
                 this.getEmail(),
