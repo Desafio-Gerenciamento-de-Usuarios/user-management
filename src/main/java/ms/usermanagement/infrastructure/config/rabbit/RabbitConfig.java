@@ -27,16 +27,33 @@ public class RabbitConfig {
     }
 
     @Bean
-    public Declarables declarables(
+    public Declarables declarableCreate(
             @Value("${amqp.queue.user-created}") String userCreatedQueue,
             @Value("${amqp.dlq.user-created-dlq}") String userCreatedDlq) {
 
-        Queue mainQueue = QueueBuilder.durable(userCreatedQueue)
+       final Queue mainQueue = QueueBuilder.durable(userCreatedQueue)
                 .withArgument("x-dead-letter-exchange", "")
                 .withArgument("x-dead-letter-routing-key", userCreatedDlq)
                 .build();
 
-        Queue dlq = QueueBuilder.durable(userCreatedDlq).build();
+       final Queue dlq = QueueBuilder.durable(userCreatedDlq).build();
+
+        return new Declarables(mainQueue, dlq);
+    }
+
+    @Bean
+    public Declarables declarableNotify(
+            @Value("${amqp.queue.notify-user}")
+            String notifyUserQueue,
+            @Value("${amqp.dlq.notify-user-dlq}")
+            String notifyUserDlq
+    ){
+        final Queue mainQueue = QueueBuilder.durable(notifyUserQueue)
+                .withArgument("x-dead-letter-exchange", "")
+                .withArgument("x-dead-letter-routing-key", notifyUserDlq)
+                .build();
+
+        final Queue dlq = QueueBuilder.durable(notifyUserDlq).build();
 
         return new Declarables(mainQueue, dlq);
     }

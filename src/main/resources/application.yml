@@ -30,8 +30,10 @@ spring:
 amqp:
   queue:
     user-created: user-created.queue
+    notify-user: notify-user.queue
   dlq:
     user-created-dlq: user-created.dlq
+    notify-user-dlq: notify-user.dlq
 
 server:
   servlet:
@@ -40,3 +42,19 @@ server:
 
 jwt:
   public-key-path: ./keys/public_key.pem
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+
+app:
+  collection:
+    path:
+      insomnia: ./collections/insomnia-collection.yaml
+      postman: ./collections/postman-collection.json
