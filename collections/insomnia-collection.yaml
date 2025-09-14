@@ -1,0 +1,210 @@
+type: collection.insomnia.rest/5.0
+name: Gerenciamento Micro serviços
+meta:
+  id: wrk_6ed85f8db0084e66a5255b95a490dc36
+  created: 1756269523965
+  modified: 1757714157695
+  description: ""
+collection:
+  - name: MS-AUTH
+    meta:
+      id: fld_0ad1ec5c658e4ef2925d421beee7a807
+      created: 1756951177949
+      modified: 1756951237633
+      sortKey: -1756951178149
+      description: ""
+    children:
+      - url: "{{ _.urlAuth }}/auth/register"
+        name: Register
+        meta:
+          id: req_fcc1bdf7243742d8a9d6c00836b31f42
+          created: 1756269536452
+          modified: 1757711345773
+          isPrivate: false
+          description: ""
+          sortKey: -1756951190807
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "username": "",
+              "password": "",
+              "name": "",
+              "email": "",
+              "document": "",
+              "dateOfBirth": "",
+              "phone": "",
+              "addresses": [
+                {
+                  "road": "",
+                  "number": "",
+                  "complement": "",
+                  "neighborhood": "",
+                  "city": "",
+                  "state": "",
+                  "zipCode": "",
+                  "country": ""
+                }
+              ]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.urlAuth }}/auth/login"
+        name: Login
+        meta:
+          id: req_e027f0b0d6254d56ab061789212c4676
+          created: 1756326685676
+          modified: 1757040625448
+          isPrivate: false
+          description: ""
+          sortKey: -1756951190857
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"username": "user",
+            	"password": ""
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.urlAuth }}/token/refresh"
+        name: Renew Token
+        meta:
+          id: req_147d2397617c451db81f9a5e6212aa7e
+          created: 1756337930677
+          modified: 1757714249156
+          isPrivate: false
+          description: ""
+          sortKey: -1756951190757
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.5.0
+            id: pair_d52a5af32dc14982ac1df64bbee76c31
+          - id: pair_944b7515abf44c39a1759d89d4e2a866
+            name: Authorization
+            value: "{% response 'header', 'req_e027f0b0d6254d56ab061789212c4676',
+              'b64::QXV0aG9yaXphdGlvbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: MS-USER
+    meta:
+      id: fld_6c286afe121e42418a1b5268efe98993
+      created: 1756951227106
+      modified: 1756951235457
+      sortKey: -1756951178049
+      description: ""
+    children:
+      - url: "{{ _.urlUser }}/users"
+        name: Recuperar Usuarios
+        meta:
+          id: req_fb6411d9a6f24c8a8cd1153fbca6c1d9
+          created: 1756951244085
+          modified: 1756956032791
+          isPrivate: false
+          description: ""
+          sortKey: -1756951244085
+        method: GET
+        parameters:
+          - id: pair_d338f16f0ac448328f1b656898b1ea44
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.5.0
+            id: pair_941d6346fa4f4d1cb2d5d732452d59c4
+          - id: pair_6dd359b5b20d40bb9a4f1f2efe15fbc2
+            name: Authorization
+            value: "{% response 'header', 'req_e027f0b0d6254d56ab061789212c4676',
+              'b64::QXV0aG9yaXphdGlvbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.urlUser }}/actuator/health"
+        name: Actuator
+        meta:
+          id: req_524b935773f849b59ceb37629990ac4a
+          created: 1756955843067
+          modified: 1757714192780
+          isPrivate: false
+          description: ""
+          sortKey: -1756955843067
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.5.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_d7a7b3e9a0eff970f1c714457725d556e0197a3a
+    created: 1756269523991
+    modified: 1757714196678
+  cookies:
+    - key: JSESSIONID
+      value: 78021667D73972D1A53CD8C3CF5B88B5
+      domain: localhost
+      path: /api/v1
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-09-04T03:13:35.812Z
+      lastAccessed: 2025-09-12T21:56:36.677Z
+      id: b83ac722-e0cb-4338-a29e-ba9de30b0241
+environments:
+  name: Base Environment
+  meta:
+    id: env_d7a7b3e9a0eff970f1c714457725d556e0197a3a
+    created: 1756269523977
+    modified: 1756955542502
+    isPrivate: false
+  data:
+    urlUser: hostUser
+    urlAuth: http://localhost:8080/api/v1
