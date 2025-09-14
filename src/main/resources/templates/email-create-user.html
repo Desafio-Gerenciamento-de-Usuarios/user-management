@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Conta Criada com Sucesso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 6px solid #2ecc71;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            font-style: italic;
+            color: #888888;
+            border-top: 1px solid #eeeeee;
+            padding-top: 15px;
+        }
+
+        .info-box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+        }
+
+        .ins-button {
+            background-color: #5F00D3;
+        }
+
+        .post-button {
+            background-color: #E0531F;
+        }
+
+        .ins-button:hover {
+            background-color: #4900a8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .post-button:hover {
+            background-color: #c54417;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .status-active {
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Olá, <span th:text="${nameUser}">Usuário</span>!</h1>
+    <p>
+        Sua conta foi criada com sucesso em nossa plataforma.
+    </p>
+
+    <hr style="border: none; border-top: 1px solid #eeeeee; margin: 25px 0;">
+
+    <div class="info-box">
+        <p><strong>Data de criação:</strong> <span th:text="${dateCreate}">12/09/2025 21:35</span></p>
+        <p><strong>Status:</strong> <span class="status-active">Ativa</span></p>
+    </div>
+
+    <p>
+        Agora você pode acessar e testar os outros microserviços disponíveis, explorar funcionalidades e validar suas
+        integrações.
+    </p>
+
+    <p>
+        Baixe a collection para facilitar seus testes:
+    </p>
+
+    <div class="buttons-container">
+        <a th:href="@{${collectionInsomnia}}" class="button ins-button">Collection Insomnia</a>
+        <a th:href="@{${collectionPostman}}" class="button post-button">Collection Postman</a>
+    </div>
+
+    <div class="footer">
+        <p>Se você não criou esta conta, ignore este e-mail. Para dúvidas ou suporte, entre em contato conosco.</p>
+    </div>
+</div>
+</body>
+</html>
