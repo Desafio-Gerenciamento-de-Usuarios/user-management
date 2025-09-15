@@ -206,5 +206,5 @@ environments:
     modified: 1756955542502
     isPrivate: false
   data:
-    urlUser: hostUser
+    urlUser: {{ hostUser }}
     urlAuth: http://localhost:8080/api/v1

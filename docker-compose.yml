@@ -12,6 +12,7 @@ services:
       INSOMNIA_COLLECTION_PATH: /app/collections/insomnia-collection.yaml
       POSTMAN_COLLECTION_PATH: /app/collections/postman-collection.json
       HOST_DB: postgres_user_db
+      HOST_RABBIT: rabbitmq_broker
     volumes:
       - ./keys:/app/keys
       - ./collections:/app/collections

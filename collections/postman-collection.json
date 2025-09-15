@@ -1,0 +1,394 @@
+{
+  "info": {
+    "_postman_id": "d060cc87-3b3d-4277-9f83-dc45b0c55553",
+    "name": "Collection Postman",
+    "description": "HAR To Postman Generated Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "36381008"
+  },
+  "item": [
+    {
+      "name": "MS_USER",
+      "item": [
+        {
+          "name": "localhost:8081/api/v1/collections/insomnia",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "User-Agent",
+                "value": "insomnia/11.6.0"
+              }
+            ],
+            "url": "{{baseURL1}}/collections/insomnia"
+          },
+          "response": [
+            {
+              "name": "successfully / 200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "User-Agent",
+                    "value": "insomnia/11.6.0"
+                  }
+                ],
+                "url": "{{baseURL1}}/collections/insomnia"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Disposition",
+                  "value": "attachment; filename=\"insomnia-collection.yaml\""
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/x-yaml"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "6167"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 12 Sep 2025 23:40:55 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "application/x-yaml content type is not supported in the response body"
+            }
+          ]
+        },
+        {
+          "name": "localhost:8081/api/v1/actuator/health",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "User-Agent",
+                "value": "insomnia/11.5.0"
+              }
+            ],
+            "url": "{{baseURL1}}/actuator/health"
+          },
+          "response": [
+            {
+              "name": "successfully / 200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "User-Agent",
+                    "value": "insomnia/11.5.0"
+                  }
+                ],
+                "url": "{{baseURL1}}/actuator/health"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.spring-boot.actuator.v3+json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 12 Sep 2025 22:47:07 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "application/vnd.spring-boot.actuator.v3+json content type is not supported in the response body"
+            }
+          ]
+        },
+        {
+          "name": "localhost:8081/api/v1/users",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ZjM2NzYyNy1jYWU1LTQ4YjAtODVmNS0xNDViZjk5MWUwMmUiLCJ1c2VybmFtZSI6ImpvYW9zaWx2YV9iIiwiZW1haWwiOiJqaG93ejE1NzhAZ21haWwuY29tIiwidHlwZSI6InJlZnJlc2giLCJleHAiOjE3NTc3MjI5NDF9.Kpw8zKVEJRb_sqUnDUPGcWtYo14G_uxKtyEqUNPG_hQsLVpCo7_WN6Ic_KFTfRhauTgLtISNt7sf09zRvDsH-iyqucSbvKM-H4E4MRRi6uOgMtOXk4PGtswfpA-6RPMVUvj7Ks3VQdL4oWjZwo6OkxP2Jzgc13b85w3PCcm1w7DfEoWgggCb0FtYqiDLqC4Z7gMZbdVP8z7rXd6DyoFciBAUmys5vdRf5kGzAv7SxZOM4NOuvIub4N0Ual0yZL5RUc3weyeVrhTbsz8IEhnyiAtG3yqi4NQ71VVPf2aydbIfdfn0pyGYirRE83531Lj9HZmMYvodnSkun_l4ssn6oQ"
+              },
+              {
+                "key": "User-Agent",
+                "value": "insomnia/11.5.0"
+              }
+            ],
+            "url": "{{baseURL1}}/users"
+          },
+          "response": [
+            {
+              "name": "successfully / 200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ZjM2NzYyNy1jYWU1LTQ4YjAtODVmNS0xNDViZjk5MWUwMmUiLCJ1c2VybmFtZSI6ImpvYW9zaWx2YV9iIiwiZW1haWwiOiJqaG93ejE1NzhAZ21haWwuY29tIiwidHlwZSI6InJlZnJlc2giLCJleHAiOjE3NTc3MjI5NDF9.Kpw8zKVEJRb_sqUnDUPGcWtYo14G_uxKtyEqUNPG_hQsLVpCo7_WN6Ic_KFTfRhauTgLtISNt7sf09zRvDsH-iyqucSbvKM-H4E4MRRi6uOgMtOXk4PGtswfpA-6RPMVUvj7Ks3VQdL4oWjZwo6OkxP2Jzgc13b85w3PCcm1w7DfEoWgggCb0FtYqiDLqC4Z7gMZbdVP8z7rXd6DyoFciBAUmys5vdRf5kGzAv7SxZOM4NOuvIub4N0Ual0yZL5RUc3weyeVrhTbsz8IEhnyiAtG3yqi4NQ71VVPf2aydbIfdfn0pyGYirRE83531Lj9HZmMYvodnSkun_l4ssn6oQ"
+                  },
+                  {
+                    "key": "User-Agent",
+                    "value": "insomnia/11.5.0"
+                  }
+                ],
+                "url": "{{baseURL1}}/users"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 05 Sep 2025 02:50:35 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n {\n  \"id\": \"54e97031-a018-492c-beb8-b30ff88310fe\",\n  \"document\": \"12345612122\",\n  \"email\": \"joaob.silva@email.com\",\n  \"name\": \"João da Silva\",\n  \"phone\": \"11987654311\",\n  \"createdAt\": \"2025-09-04T23:50:08.784152\",\n  \"addresses\": [\n   {\n    \"street\": \"Rua das Floressss\",\n    \"number\": \"1235\",\n    \"city\": \"São Paulo\",\n    \"state\": \"SP\",\n    \"zipCode\": \"01415001\"\n   },\n   {\n    \"street\": \"Avenida Brasillll\",\n    \"number\": \"1500\",\n    \"city\": \"São Paulo\",\n    \"state\": \"SP\",\n    \"zipCode\": \"04017031\"\n   }\n  ]\n }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MS-AUTH",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "User-Agent",
+                "value": "insomnia/11.5.0"
+              }
+            ],
+            "url": "{{baseURL2}}/auth/login"
+          },
+          "response": [
+            {
+              "name": "successfully / 200",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "User-Agent",
+                    "value": "insomnia/11.5.0"
+                  }
+                ],
+                "url": "{{baseURL2}}/auth/login"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ZjM2NzYyNy1jYWU1LTQ4YjAtODVmNS0xNDViZjk5MWUwMmUiLCJ1c2VybmFtZSI6ImpvYW9zaWx2YV9iIiwiZW1haWwiOiJqaG93ejE1NzhAZ21haWwuY29tIiwidHlwZSI6InJlZnJlc2giLCJleHAiOjE3NTc3MjI5NDF9.Kpw8zKVEJRb_sqUnDUPGcWtYo14G_uxKtyEqUNPG_hQsLVpCo7_WN6Ic_KFTfRhauTgLtISNt7sf09zRvDsH-iyqucSbvKM-H4E4MRRi6uOgMtOXk4PGtswfpA-6RPMVUvj7Ks3VQdL4oWjZwo6OkxP2Jzgc13b85w3PCcm1w7DfEoWgggCb0FtYqiDLqC4Z7gMZbdVP8z7rXd6DyoFciBAUmys5vdRf5kGzAv7SxZOM4NOuvIub4N0Ual0yZL5RUc3weyeVrhTbsz8IEhnyiAtG3yqi4NQ71VVPf2aydbIfdfn0pyGYirRE83531Lj9HZmMYvodnSkun_l4ssn6oQ"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 12 Sep 2025 23:22:21 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n \"idUser\": \"8f367627-cae5-48b0-85f5-145bf991e02e\",\n \"username\": \"joaosilva_b\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "User-Agent",
+                "value": "insomnia/11.5.0"
+              }
+            ],
+            "url": "{{baseURL2}}/auth/register"
+          },
+          "response": [
+            {
+              "name": "created / 201",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "User-Agent",
+                    "value": "insomnia/11.5.0"
+                  }
+                ],
+                "url": "{{baseURL2}}/auth/register"
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Location",
+                  "value": "http://localhost:8080/api/v1/users/eb3a3930-5a8f-48bc-8045-10ce278160a9"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 15 Sep 2025 14:23:23 GMT"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n              \"username\": \"\",\n              \"password\": \"\",\n              \"name\": \"\",\n              \"email\": \"\",\n              \"document\": \"\",\n              \"dateOfBirth\": \"\",\n              \"phone\": \"\",\n              \"addresses\": [\n                {\n                  \"road\": \"\",\n                  \"number\": \"\",\n                  \"complement\": \"\",\n                  \"neighborhood\": \"\",\n                  \"city\": \"\",\n                  \"state\": \"\",\n                  \"zipCode\": \"\",\n                  \"country\": \"\"\n                }\n              ]\n            }"
+            }
+          ]
+        },
+        {
+          "name": "refresh",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4ZjM2NzYyNy1jYWU1LTQ4YjAtODVmNS0xNDViZjk5MWUwMmUiLCJ1c2VybmFtZSI6ImpvYW9zaWx2YV9iIiwiZW1haWwiOiJqaG93ejE1NzhAZ21haWwuY29tIiwidHlwZSI6InJlZnJlc2giLCJleHAiOjE3NTc3MjI5NDF9.Kpw8zKVEJRb_sqUnDUPGcWtYo14G_uxKtyEqUNPG_hQsLVpCo7_WN6Ic_KFTfRhauTgLtISNt7sf09zRvDsH-iyqucSbvKM-H4E4MRRi6uOgMtOXk4PGtswfpA-6RPMVUvj7Ks3VQdL4oWjZwo6OkxP2Jzgc13b85w3PCcm1w7DfEoWgggCb0FtYqiDLqC4Z7gMZbdVP8z7rXd6DyoFciBAUmys5vdRf5kGzAv7SxZOM4NOuvIub4N0Ual0yZL5RUc3weyeVrhTbsz8IEhnyiAtG3yqi4NQ71VVPf2aydbIfdfn0pyGYirRE83531Lj9HZmMYvodnSkun_l4ssn6oQ"
+              },
+              {
+                "key": "User-Agent",
+                "value": "insomnia/11.5.0"
+              }
+            ],
+            "url": "{{baseURL2}}/token/refresh"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL1",
+      "value": "{{ hostUser }}",
+      "type": "any"
+    },
+    {
+      "key": "baseURL2",
+      "value": "http://localhost:8080",
+      "type": "any"
+    }
+  ]
+}

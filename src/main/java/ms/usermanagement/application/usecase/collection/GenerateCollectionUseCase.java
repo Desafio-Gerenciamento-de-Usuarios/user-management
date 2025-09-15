@@ -6,17 +6,17 @@ import ms.usermanagement.domain.gateway.CollectionGateway;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GenerateInsomniaCollectionUseCase extends UseCase<HttpInput, String> {
+public class GenerateCollectionUseCase extends UseCase<HttpInput, String> {
 
     private final CollectionGateway collectionGateway;
 
-    public GenerateInsomniaCollectionUseCase(CollectionGateway collectionGateway) {
+    public GenerateCollectionUseCase(CollectionGateway collectionGateway) {
         this.collectionGateway = collectionGateway;
     }
 
     @Override
     public String execute(HttpInput input) {
-        final String collection = collectionGateway.getInsomniaCollection();
+        final String collection = collectionGateway.getCollection(input.collectionType());
 
         final String baseUrl = input.scheme() + "://" + input.serverName()
                 + (input.serverPort() == 80 || input.serverPort() == 443 ? "" : ":" + input.serverPort())

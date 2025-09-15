@@ -1,5 +1,7 @@
 package ms.usermanagement.domain.gateway;
 
+import ms.usermanagement.domain.model.CollectionType;
+
 public interface CollectionGateway {
-    String getInsomniaCollection();
+    String getCollection(CollectionType nameCollection);
 }

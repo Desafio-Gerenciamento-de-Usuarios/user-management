@@ -14,7 +14,7 @@ spring:
   rabbitmq:
     publisher-returns: true
     publisher-confirm-type: correlated
-    host: localhost
+    host: ${HOST_RABBIT:localhost}
     port: 5672
     username: guest
     password: guest
