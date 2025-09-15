@@ -64,11 +64,11 @@ public class CreateUserUseCase extends VoidUseCase<CreateUserInput> {
     @Override
     public void validate(CreateUserInput input) {
         if (userGateway.existsByEmail(input.email())) {
-            throw new IllegalArgumentException("Email already exists");
+            throw new IllegalArgumentException("Email Já Cadastrado");
         }
 
         if (userGateway.existByDocument(input.document())) {
-            throw new IllegalArgumentException("Document already exists");
+            throw new IllegalArgumentException("Document Já Cadastrado");
         }
     }
 

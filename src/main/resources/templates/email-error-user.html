@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Erro na Criação da Conta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 6px solid #e74c3c; /* vermelho para erro */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #e74c3c;
+            margin-top: 0;
+        }
+
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            font-style: italic;
+            color: #888888;
+            border-top: 1px solid #eeeeee;
+            padding-top: 15px;
+        }
+
+        .info-box {
+            background-color: #fef2f2;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .error-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Ops, <span th:text="${nameUser}">Usuário</span>!</h1>
+    <p>
+        Não foi possível criar sua conta em nossa plataforma.
+    </p>
+
+    <hr style="border: none; border-top: 1px solid #eeeeee; margin: 25px 0;">
+
+    <div class="info-box">
+        <p><strong>Data da tentativa:</strong> <span th:text="${dateAttempt}">01/01/2025 12:00</span></p>
+        <p><strong>Motivo do erro:</strong> <span th:text="${errorMessage}" class="error-highlight">Erro desconhecido</span></p>
+    </div>
+
+    <p>
+        Por favor, tente novamente mais tarde ou entre em contato com o suporte.
+    </p>
+
+    <div class="footer">
+        <p>Se você não tentou criar esta conta, ignore este e-mail.</p>
+    </div>
+</div>
+</body>
+</html>

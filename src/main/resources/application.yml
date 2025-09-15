@@ -4,7 +4,7 @@ spring:
   application:
     name: ms-user
   datasource:
-    url: jdbc:postgresql://localhost:5432/user_db?currentSchema=management
+    url: jdbc:postgresql://${HOST_DB:localhost}:5432/user_db?currentSchema=management
     username: user
     password: pass
     driver-class-name: org.postgresql.Driver
@@ -41,7 +41,7 @@ server:
   port: 8081
 
 jwt:
-  public-key-path: ./keys/public_key.pem
+  public-key-path: ${JWT_PUBLIC_KEY_PATH:./keys/public_key.pem}
 
 management:
   endpoints:
@@ -56,5 +56,5 @@ management:
 app:
   collection:
     path:
-      insomnia: ./collections/insomnia-collection.yaml
-      postman: ./collections/postman-collection.json
+      insomnia: ${INSOMNIA_COLLECTION_PATH:./collections/insomnia-collection.yaml}
+      postman: ${POSTMAN_COLLECTION_PATH:./collections/postman-collection.json}
