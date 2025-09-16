@@ -15,7 +15,10 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Copiar collections e keys para a imagem
-COPY collections /app/collections
+COPY --from=build /app/collections /app/collections
+
+RUN ls -la /app/collections/
+
 EXPOSE 8081
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
