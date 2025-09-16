@@ -16,7 +16,6 @@ COPY --from=build /app/target/*.jar app.jar
 
 # Copiar collections e keys para a imagem
 COPY collections /app/collections
-COPY keys /app/keys
 
 EXPOSE 8081
 
